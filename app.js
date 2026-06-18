@@ -101,3 +101,25 @@ async function editarProducto(id, nombreActual, precioActual, existenciaActual) 
 
     cargarProductos();
 }
+
+function buscarProducto() {
+
+    const texto = document
+        .getElementById("buscar")
+        .value
+        .toLowerCase();
+
+    const filas = tabla.getElementsByTagName("tr");
+
+    for (let fila of filas) {
+
+        const nombre = fila.cells[0]?.textContent.toLowerCase();
+
+        if (nombre && nombre.includes(texto)) {
+            fila.style.display = "";
+        } else {
+            fila.style.display = "none";
+        }
+
+    }
+}

@@ -57,17 +57,26 @@
 
     <h1>Inventario de Productos</h1>
 
-    <form id="formProducto">
-        <input type="text" id="nombre" placeholder="Nombre" required>
-        <input type="number" id="precio" placeholder="Precio" required>
-        <input type="number" id="existencia" placeholder="Existencia" required>
+   <form id="formProducto">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="number" id="precio" placeholder="Precio" required>
+    <input type="number" id="existencia" placeholder="Existencia" required>
 
-        <button type="submit">
-            Agregar Producto
-        </button>
-    </form>
+    <button type="submit">
+        Agregar Producto
+    </button>
+</form>
 
-    <table>
+<input
+    type="text"
+    id="buscar"
+    placeholder="Buscar producto..."
+    onkeyup="buscarProducto()"
+>
+
+<br><br>
+
+<table>
         <thead>
             <tr>
                 <th>Nombre</th>
